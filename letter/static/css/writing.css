@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: rgb(253, 245, 245);
+    border: none;           
+    cursor: pointer;                 
+    border-radius: 30px;
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    opacity: 0.6;
+    transition-duration: 0.3s;
+}
+
+.active, .btn:hover {
+    border-style: groove;
+    opacity: 1;
+}
+
+#next_btn {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    height: 50px;
+    width: 500px;
+}
+
+#next_btn[disabled] {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+input#ic_rose {
+    background-image: url(/media/ic_rose.png);
+}
+input#ic_rose_frag {
+    background-image: url(/media/ic_rose_frag.png);
+}
+input#ic_compass {
+    background-image: url(/media/ic_compass.png);
+}
+input#ic_bottle_letter {
+    background-image: url(/media/ic_bottle_letter.png);
+}
+input#ic_bottle_heart {
+    background-image: url(/media/ic_bottle_heart.png);
+}
+input#ic_white_whale {
+    background-image: url(/media/ic_white_whale.png);
+}
+input#ic_whale {
+    background-image: url(/media/ic_whale.png);
+}

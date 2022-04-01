@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+}
+
+.background::before {
+    content: "";
+    display: block;
+    background-image: url(../media/bg_ocean.jpeg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.duo {
+    position:relative;
+    display: inline-block;
+}
+
+
+
+/* 온라인 웹 디자인 */
+@media ( min-width: 768px ) {
+    #mainNav {
+        min-height: 3.5rem;
+    }
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media ( min-width: 1024px ) {
+    .duo {
+        margin: 80px;
+    }
+    .div1 {
+        position: relative;
+        left: 200px;
+        top: 30px;
+    }
+    .div2 {
+        position: relative;
+        left: 50px;
+        right: 0px;
+        top: 50px;
+    }
+
+    #mainNav {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    nav {
+        display: block;
+    }
+}
+
+.btn {
+    background-color: transparent;
+    border: none;           
+    cursor: pointer;                 
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    transition-duration: 0.3s;
+}
+
+input#ic_rose {
+    background-image: url(/media/ic_rose.png);
+}
+input#ic_rose_frag {
+    background-image: url(/media/ic_rose_frag.png);
+}
+input#ic_compass {
+    background-image: url(/media/ic_compass.png);
+}
+input#ic_bottle_letter {
+    background-image: url(/media/ic_bottle_letter.png);
+}
+input#ic_bottle_heart {
+    background-image: url(/media/ic_bottle_heart.png);
+}
+input#ic_white_whale {
+    background-image: url(/media/ic_white_whale.png);
+}
+input#ic_whale {
+    background-image: url(/media/ic_whale.png);
+}
