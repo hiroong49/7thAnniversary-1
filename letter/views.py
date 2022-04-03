@@ -1,15 +1,20 @@
 from django.shortcuts import render
+from .models import Article
 
 # Create your views here.
 def home(requests):
-    return render(requests, 'home.html')
+    article = Article.objects
+    return render(requests, 'home.html', {'article' : article})
 
-def home2(requests):
+def afterhome(requests):
     return render(requests, 'after_home.html')
 
-def letter(requests):
-    return render(requests, 'letter.html')
+def icon(requests):
+    return render(requests, 'letter_icon.html')
 
 def writing(requests):
-    return render(requests, 'writing.html')
+    return render(requests, 'letter_writing.html')
+
+def afterletter(requests):
+    return render(requests, 'after_letter.html')
 
