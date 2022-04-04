@@ -14,7 +14,7 @@
 .background::before {
     content: "";
     display: block;
-    background-image: url(../media/bg_ocean.jpeg);
+    background-image: url(../img/bg_ocean.jpeg);
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -57,6 +57,10 @@ p {
         justify-content: space-between;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+    }
+    .duo {
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -122,23 +126,23 @@ p {
 }
 
 input#ic_rose {
-    background-image: url(/media/ic_rose.png);
+    background-image: url(../img/ic_rose.png);
 }
 input#ic_rose_frag {
-    background-image: url(/media/ic_rose_frag.png);
+    background-image: url(../img/ic_rose_frag.png);
 }
 input#ic_compass {
-    background-image: url(/media/ic_compass.png);
+    background-image: url(../img/ic_compass.png);
 }
 input#ic_bottle_letter {
-    background-image: url(/media/ic_bottle_letter.png);
+    background-image: url(../img/ic_bottle_letter.png);
 }
 input#ic_bottle_heart {
-    background-image: url(/media/ic_bottle_heart.png);
+    background-image: url(../img/ic_bottle_heart.png);
 }
 input#ic_white_whale {
-    background-image: url(/media/ic_white_whale.png);
+    background-image: url(../img/ic_white_whale.png);
 }
 input#ic_whale {
-    background-image: url(/media/ic_whale.png);
+    background-image: url(../img/ic_whale.png);
 }

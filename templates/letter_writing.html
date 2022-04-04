@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/letter_writing.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+        <title>LETTER WRITING PAGE</title>
+    </head>
+    <body>
+        <a href="{% url 'home'%}"><i class="fa-solid fa-chevron-left"></i></a>
+
+        <h1>편지쓰기</h1>
+
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="div1">
+                <label>닉네임</label>
+                <input type="text" name="author" id="uid" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" required>
+            </div>
+            <br>
+            <div id="div2">
+                <label>사진</label>
+                <img id="preview" src="#" style="width: 200px;">
+                <input id="uploadFile" type="file" name="photo" onchange="readFile(event);"/>
+                <br>
+            </div>
+                <br>
+            <div>
+                <label>사진 출처</label>
+                <input type="text" name="source" placeholder="사진의 출처를 기입해주세요. (필수 기입 사항은 아닙니다)">
+            </div>
+            <br>
+
+            <div>
+            <label>전할 말</label>
+            <textarea id="content" name="body" type="text" rows="10" cols="50" placeholder="아티스트에게 모욕적인 표현과 말은 삼가해주세요 "></textarea>
+            </div>
+
+            <input type="submit" id="submit_btn" value='바다에 띄우기'/>
+        </form>
+
+        <!-- post 가져와 보여주기
+            {% for obj in posts.all %}
+            <p>닉네임 : {{ obj.author }}</p>
+                {% if obj.photo %}
+                    <img src="{{ obj.photo.url }}" >
+                {% endif %}
+            <p>사진 출처 : {{ obj.source }}</p>
+            <p>전할 말 : {{ obj.body }}</p>
+            {% endfor %}
+        -->
+        
+    </body>
+    <script type="text/javascript" src="{%static 'js/letter_writing.js'%}"></script>
+
+</html>

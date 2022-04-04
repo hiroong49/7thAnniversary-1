@@ -38,6 +38,3 @@ dateObj.setDate(dateObj.getDate() + 1);
 
 //countDownTimer('demo', '03/25/2022 09:00 PM');
 countDownTimer('demo', '05/14/2022 00:00 AM');
-
-
-

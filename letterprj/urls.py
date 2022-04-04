@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from letter import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,5 +26,5 @@ urlpatterns = [
     path('home/', views.afterhome, name='afterhome'),
     path('letter_icon/', views.icon, name='icon'),
     path('letter_writing/', views.writing, name='writing'),
-    path('letter_view/', views.afterletter, name="afterletter"),
-]
+    path('letter_view/<int:pk>/', views.afterletter, name="afterletter"),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

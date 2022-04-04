@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: white;
+}
+
+.div1{
+    text-align: center;
+}
+
+.div2{
+    margin: 100px;
+    padding: 50px;
+}
+
+#submit_btn {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#submit_btn[disabled] {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+/* 데스크탑 */
+@media ( min-width: 1024px ) {
+    .btn {
+        height: 150px;
+        width: 150px;
+    }
+    #submit_btn {
+        font-size: 16px;
+        height: 50px;
+        width: 500px;
+    }
+}

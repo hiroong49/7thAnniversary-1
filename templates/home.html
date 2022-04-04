@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/066f39e5ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+    <title>Monsta_x 7th</title>
+</head>
+<body>
+    <!-- 배경화면 설정 -->
+    <div class="background">
+        <div class="layer">
+            <div id="div1">
+                <p id="annaeText">바다로 흘러간 편지는 5월 14일 00시에 도착합니다</p>
+                <p id="demo"></p>
+            </div>
+            <a href="{%url 'writing' %}" class="float_letter">편지 띄우기
+                &nbsp;<i class="fa-solid fa-arrow-right-long"></i>
+            </a>        
+        </div>
+    </div>
+    <!--네브바 시작-->
+    <div class="header">
+        <div class="section">
+            <div>
+                <a href="{% url 'home' %}" class="logo">MONSTA X 7th Anniversary</a>
+            </div>
+        </div>
+    </div>
+    <!--네브바 끝-->
+</body>
+</html>
