@@ -13,11 +13,11 @@ def upload_to_func(instance, filename):
 
 
 class Post(models.Model):
-    author = models.CharField(max_length=30)    # 글쓴이
+    author = models.CharField(blank=False, unique=True, max_length=30)    # 글쓴이 (입력 값 db 중복 체크 => 중복값 존재할 경우, 실행되지 않음)
     # MEDIA_ROOT/uploads/2021/01/01 경로로 파일 업로드
-    photo = models.ImageField(blank=True, upload_to='images/%Y/%m/%d/')     # 이미지 
-    source = models.TextField() # 사진 출처
-    body = models.TextField()   # 본문
+    photo = models.ImageField(blank=False, upload_to='images/%Y/%m/%d/')     # 이미지 등록한 연/월/일 폴더 안에 저장 
+    source = models.TextField(blank=True) # 사진 출처
+    body = models.TextField(blank=False)   # 본문
 
     # admin 글 제목 표시하기 위한 함수
     def __str__(self):
