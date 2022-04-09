@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render, get_object_or_404
 from .models import Post
 from .forms import PostForm     # forms.py에서 PostForm 가져오기
 
+
 # Create your views here.
 def home(requests):
     return render(requests, 'home.html')
