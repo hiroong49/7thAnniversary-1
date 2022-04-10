@@ -2,7 +2,7 @@
 
 // 아이콘 선택하면 꾹 눌리고 다음으로 버튼 활성화
 function select_icon() {
-    window.location.href = '../letter_writing/letter.html'
+    window.location.href = '../letter_writing'
     
     // var btns = document.getElementsByClassName("btn"); 
 
