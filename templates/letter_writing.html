@@ -31,7 +31,7 @@
                     {% elif field.name == "author" %}
                     
                         <input type="text" name="author" id="uid" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" required>                        
-                        <input id="btn-author" type="button" value="닉네임 중복체크">
+                        <button type="button" id="btn-author" onclick="duplicate_check();">닉네임 중복체크</button>
                     
                     {% elif field.name == "source" %}
                     <div>
