@@ -16,7 +16,7 @@ const countDownTimer = function (id, date) {
         // 목표 시간 되면
         if (distDt < 0) { 
             clearInterval(timer); 
-            window.location.href = '../after_514/after_home.html'
+            window.location.href = '../after_home'
             return; 
         } 
         
