@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, Http404
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Post
 from .forms import PostForm     # forms.py에서 PostForm 가져오기
@@ -13,8 +13,16 @@ def afterhome(requests):
     return render(requests, 'after_home.html', {'posts': posts})
 
 
-def icon(requests):
-    return render(requests, 'letter_icon.html')
+def icon(requests, author):
+    if requests.method == 'GET':
+        try:
+            post = Post.objects.get(author=author)
+            post.letter_paper = "ic_cake"   # 선택된 이미지의 id가 들어가야 하는 곳
+            post.save()
+            # return redirect('home')
+        except:
+            raise Http404("Author does not exist")
+    return render(requests, 'letter_icon.html', {'author': author})
 
 
 def writing(requests):
@@ -24,8 +32,9 @@ def writing(requests):
     if requests.method == 'POST':
         form = PostForm(requests.POST, requests.FILES)   # form 변수에 PostForm 할당
         if form.is_valid():     # form 유효성 검증
+            author = requests.POST.get('author')
             form.save()         # 내용 저장
-            return redirect('home')  # home 페이지로 가기
+            return redirect('/letter_writing/' + author + '/')  # home 페이지로 가기
     else:
         form = PostForm()   # 빈 form 열기
         
