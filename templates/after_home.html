@@ -29,53 +29,16 @@
     <!-- 배경화면 설정 -->
     <div class="background">
         <!-- 편지지 아이콘 떠다니기 -->
-        <div onclick="click_letter()">
+        {% for post in posts %}
             <div class="div1">
-                <div class="duo" id="duo">
-                    <input type="button" class="btn" id="ic_rose"></input>
-                    <p>동대문 쿨키드</p>
-                </div>
+                <a href="/letter_view/{{ post.pk }}/">
+                    <div class="duo" id="duo">
+                        <input type="button" class="btn" id="ic_rose">
+                        <p>{{ post.author }}</p>
+                    </div>
+                </a>
             </div>
-            <div class="div2">
-                <div class="duo">
-                    <input type="button" class="btn" id="ic_bottle_letter"></input>
-                    <p>동대문 쿨키드</p>
-                </div>
-                <div class="duo">
-                    <input type="button" class="btn" id="ic_bottle_heart"></input>
-                    <p>몽베베</p>
-                </div>
-                <div class="duo">
-                    <input type="button" class="btn" id="ic_compass"></input>
-                    <p>청담동 소금쟁이</p>
-                </div>
-                <div class="duo">
-                    <input type="button" class="btn" id="ic_bottle_heart"></input>
-                    <p>청담동 소금쟁이</p>
-                </div>
-                <div class="duo">
-                    <input type="button" class="btn" id="ic_bottle_letter"></input>
-                    <p>동대문 쿨키드</p>
-                </div>
-            </div>
-            <div class="div1">
-                <div class="duo">
-                    <input type="button" class="btn" id="ic_rose"></input>
-                    <p>동대문 쿨키드</p>
-                </div>
-                <div class="duo">
-                    <input type="button" class="btn" id="ic_rose_frag"></input>
-                    <p>몽베베</p>
-                </div>
-                <div class="duo">
-                    <input type="button" class="btn" id="ic_compass"></input>
-                    <p>청담동 소금쟁이</p>
-                </div>
-                <div class="duo">
-                    <input type="button" class="btn" id="ic_whale"></input>
-                    <p>청담동 소금쟁이</p>
-                </div>
-            </div>
+        {% endfor%}
         </div>
     </div>
 
