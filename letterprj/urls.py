@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('home/', views.afterhome, name='afterhome'),
-    path('letter_icon/', views.icon, name='icon'),
+    # path('letter_icon/', views.icon, name='icon'),
     path('letter_writing/', views.writing, name='writing'),
+    path('letter_writing/<str:author>/', views.icon, name='icon'),
     path('letter_view/<int:pk>/', views.afterletter, name="afterletter"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
