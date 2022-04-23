@@ -9,7 +9,7 @@ def home(requests):
 
 
 def afterhome(requests):
-    posts = Post.objects.all()
+    posts = Post.objects.order_by('?')
     return render(requests, 'after_home.html', {'posts': posts})
 
 

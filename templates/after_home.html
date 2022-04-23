@@ -33,7 +33,10 @@
             <div class="div1">
                 <a href="/letter_view/{{ post.pk }}/">
                     <div class="duo" id="duo">
-                        <input type="button" class="btn" id="ic_rose">
+                        <!-- 이미지 -->
+{#                        <input type="button" class="btn" id="ic_rose">#}
+{#                        <input type="button" class="btn" id="{{ post.letter_paper }}">#}
+                        <button type="button" class="btn" id=""><img src="{% get_static_prefix %}img/{{ post.letter_paper }}.png" width="100" height="100"></button>
                         <p>{{ post.author }}</p>
                     </div>
                 </a>
