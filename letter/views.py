@@ -1,5 +1,7 @@
 from django.http import JsonResponse, Http404
 from django.shortcuts import redirect, render, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+
 from .models import Post
 from .forms import PostForm     # forms.py에서 PostForm 가져오기
 
@@ -13,15 +15,22 @@ def afterhome(requests):
     return render(requests, 'after_home.html', {'posts': posts})
 
 
+@csrf_exempt
 def icon(requests, author):
     if requests.method == 'GET':
         try:
             post = Post.objects.get(author=author)
-            post.letter_paper = "ic_cake"   # 선택된 이미지의 id가 들어가야 하는 곳
-            post.save()
-            # return redirect('home')
         except:
-            raise Http404("Author does not exist")
+            raise Http404("존재하지 않는 작성자입니다")
+
+    if 'icon' in requests.POST:
+        letter_paper = requests.POST['icon']  # name="icon"인 request의 value
+
+        post = Post.objects.get(author=author)
+        post.letter_paper = letter_paper
+        post.save()
+        return redirect('home')
+
     return render(requests, 'letter_icon.html', {'author': author})
 
 
