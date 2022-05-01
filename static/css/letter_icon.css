@@ -1,10 +1,23 @@
+@font-face {
+    font-family: '나눔손글씨 초딩희망';
+    src: url('../fonts/나눔손글씨 초딩희망.ttf');
+}
+@font-face {
+    font-family: 'HSYuji-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     box-sizing: border-box;
     list-style: none;
+    -webkit-text-size-adjust:none;
+    /* font-family: '나눔손글씨 초딩희망', 'Nanum CoDingHeuiMang', 'Nanum CoDingHeuiMang'; */
+    font-family: 'HSYuji-Regular','HSYuji-Regular','HSYuji-Regular';
 }
 
 body {
-    background-color: white;
+    background-color: #e8e8e8;
 }
 
 .bg {
@@ -68,61 +81,102 @@ i {
 input {
     background-repeat: no-repeat;
 }
+input#ic_hyunwoo {
+    background-image: url(/media/ic_hyunwoo.PNG);
+}
+input#ic_minhyuk {
+    background-image: url(/media/ic_minhyuk.PNG);
+}
+input#ic_kihyun {
+    background-image: url(/media/ic_kihyun.PNG);
+}
+input#ic_hyungwon {
+    background-image: url(/media/ic_hyungwon.PNG);
+}
+input#ic_joohoney {
+    background-image: url(/media/ic_joohoney.PNG);
+}
+input#ic_changkyun {
+    background-image: url(/media/ic_changkyun.PNG);
+}
+input#ic_paper_boat {
+    background-image: url(/media/ic_paper_boat.PNG);
+}
 input#ic_rose {
-    background-image: url(../img/ic_rose.png);
+    background-image: url(/media/ic_rose.png);
 }
 input#ic_rose_frag {
-    background-image: url(../img/ic_rose_frag.png);
+    background-image: url(/media/ic_rose_frag.png);
 }
 input#ic_compass {
-    background-image: url(../img/ic_compass.png);
+    background-image: url(/media/ic_compass.png);
 }
 input#ic_bottle_letter {
-    background-image: url(../img/ic_bottle_letter.png);
+    background-image: url(/media/ic_bottle_letter.png);
 }
 input#ic_bottle_heart {
-    background-image: url(../img/ic_bottle_heart.png);
+    background-image: url(/media/ic_bottle_heart.png);
 }
 input#ic_whale {
-    background-image: url(../img/ic_whale.png);
+    background-image: url(/media/ic_whale.png);
 }
 input#ic_boongbbang {
-    background-image: url(../img/ic_boongbbang.png);
+    background-image: url(/media/ic_boongbbang.png);
 }
 input#ic_duck {
-    background-image: url(../img/ic_duck.png);
+    background-image: url(/media/ic_duck.png);
 }
 input#ic_shark {
-    background-image: url(../img/ic_shark.png);
+    background-image: url(/media/ic_shark.png);
 }
 input#ic_moonstar {
-    background-image: url(../img/ic_moonstar.png);
+    background-image: url(/media/ic_moonstar.png);
 }
 input#ic_cake {
-    background-image: url(../img/ic_cake.png);
+    background-image: url(/media/ic_cake.png);
 }
 input#ic_purple_heart {
     background-image: url(../img/ic_purple_heart.png);
 }
 input#ic_hamzzi {
-    background-image: url(../img/ic_hamzzi.png);
+    background-image: url(/media/ic_hamzzi.png);
 }
 input#ic_shootingstar {
-    background-image: url(../img/ic_shootingstar.png);
+    background-image: url(/media/ic_shootingstar.png);
 }
 input#ic_earth {
-    background-image: url(../img/ic_earth.png);
+    background-image: url(/media/ic_earth.png);
 }
 input#ic_socute_cat {
-    background-image: url(../img/ic_socute.PNG);
+    background-image: url(/media/ic_socute.PNG);
 }
 
 /* 핸드폰 */
-@media ( max-width: 768px ) {
+@media ( max-width: 412px ) {
     .bg {
-        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         border-radius: 60px;
-        width: 90%;
+        width: 95%;
+        margin-top: 20px;
+    }
+    .btn {
+        height: 90px;
+        width: 90px;
+    }
+    /* #next_btn {
+        font-size: 16px;
+        height: 50px;
+        width: 350px;
+    } */
+}
+@media ( min-width: 412px ) and ( max-width: 768px ) {
+    .bg {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 60px;
+        width: 95%;
+        margin-top: 20px;
     }
     .btn {
         height: 100px;
@@ -137,13 +191,15 @@ input#ic_socute_cat {
 /* 테블릿 세로 */
 @media (min-width: 768px) and (max-width: 991px) {
     .bg {
-        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         border-radius: 60px;
         width: 90%;
+        margin-top: 20px;
     }
     .btn {
-        height: 120px;
-        width: 120px;
+        height: 180px;
+        width: 180px;
     }
     /* #next_btn {
         font-size: 16px;
@@ -157,11 +213,13 @@ input#ic_socute_cat {
         width: 90%;
         height: auto;
         border-radius: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         margin-top: 20px;
     }
     .btn {
-        height: 120px;
-        width: 120px;
+        height: 250px;
+        width: 250px;
     }
     /* #next_btn {
         font-size: 16px;
@@ -175,6 +233,8 @@ input#ic_socute_cat {
         width: 717px;
         height: auto;
         border-radius: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         margin-top: 20px;
     }
     .btn {
