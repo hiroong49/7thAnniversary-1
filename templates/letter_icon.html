@@ -79,54 +79,45 @@
 </head>
 <body>
     <!--뒤로 가기 버튼-->
-    <a href="../home/home.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <a href="{% url 'home' %}"><i class="fa-solid fa-chevron-left"></i></a>
     <div class="bg">
         <div>
             <p class="title">바다에 띄울 편지지를 선택해 주세요</p>
-        </div>
-        <!--편지지 아이콘 시작-->
-        <div class="div1" onclick="select_icon()">
-            <div>
-                <input type="button" class="btn" id="ic_hyunwoo"></input>
-                <input type="button" class="btn" id="ic_minhyuk"></input>
-                <input type="button" class="btn" id="ic_kihyun"></input>
+        </div>   
+
+        <form id="icons" name="icons" method="post" action="{% url 'icon' author %}">
+            <div class="div1" onclick="select_icon()">
+                <div>
+                    <input type="submit" class="btn" name="icon" id="ic_rose" value="ic_rose"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_rose_frag" value="ic_rose_frag"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_compass" value="ic_compass"></input>
+                </div>
+                <div>
+                    <input type="submit" class="btn" name="icon" id="ic_bottle_letter" value="ic_bottle_letter"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_bottle_heart" value="ic_bottle_heart"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_whale" value="ic_whale"></input>
+                </div>
+                <div>
+                    <input type="submit" class="btn" name="icon" id="ic_boongbbang" value="ic_boongbbang"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_duck" value="ic_duck"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_shark" value="ic_shark"></input>
+                </div>
+                <div>
+                    <input type="submit" class="btn" name="icon" id="ic_moonstar" value="ic_moonstar"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_cake" value="ic_cake"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_purple_heart" value="ic_purple_heart"></input>
+                </div>
+                <div>
+                    <input type="submit" class="btn" name="icon" id="ic_hamzzi" value="ic_hamzzi"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_shootingstar" value="ic_shootingstar"></input>
+                    <input type="submit" class="btn" name="icon" id="ic_earth" value="ic_earth"></input>
+                </div>
+                <div>
+                    <input type="submit" class="btn" name="icon" id="ic_socute_cat" value="ic_socute"></input>
+                </div>
+                <!--편지지 아이콘 끝-->
             </div>
-            <div>
-                <input type="button" class="btn" id="ic_hyungwon"></input>
-                <input type="button" class="btn" id="ic_joohoney"></input>
-                <input type="button" class="btn" id="ic_changkyun"></input>
-            </div>
-            <div>
-                <input type="button" class="btn" id="ic_paper_boat"></input>
-                <input type="button" class="btn" id="ic_bottle_letter"></input>
-                <input type="button" class="btn" id="ic_bottle_heart"></input>
-            </div>
-            <div>
-                <input type="button" class="btn" id="ic_rose"></input>
-                <input type="button" class="btn" id="ic_rose_frag"></input>
-                <input type="button" class="btn" id="ic_compass"></input>
-            </div>
-            <div>
-                <input type="button" class="btn" id="ic_whale"></input>
-                <input type="button" class="btn" id="ic_duck"></input>
-                <input type="button" class="btn" id="ic_shark"></input>
-            </div>
-            <div>
-                <input type="button" class="btn" id="ic_moonstar"></input>
-                <input type="button" class="btn" id="ic_cake"></input>
-                <input type="button" class="btn" id="ic_purple_heart"></input>
-            </div>
-            <div>
-                <input type="button" class="btn" id="ic_hamzzi"></input>
-                <input type="button" class="btn" id="ic_shootingstar"></input>
-                <input type="button" class="btn" id="ic_earth"></input>
-            </div>
-            <div>
-                <input type="button" class="btn" id="ic_socute_cat"></input>
-                <input type="button" class="btn" id="ic_boongbbang"></input>
-            </div>
-            <!--편지지 아이콘 끝-->
-        </div>    
+        </form>
     </div>
     
     
