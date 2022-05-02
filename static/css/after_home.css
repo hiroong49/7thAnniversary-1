@@ -186,7 +186,7 @@ p {
 /* 온라인 웹 디자인 */
 @media ( max-width: 768px ) {  
     .sliding-background {        
-        background: url(../media/bg_home_sero.jpeg) repeat-y;
+        background: url(../img/bg_home_sero.jpeg) repeat-y;
     }
     .burger-check:checked~.menu {
         max-width: 250px;
@@ -209,7 +209,7 @@ p {
 
 @media ( min-width: 1024px ) {
     .sliding-background {
-        background: url(../media/bg_garo.png) repeat;
+        background: url(../img/bg_garo.png) repeat;
     }
     .burger-check:checked~.menu {
         max-width: 400px;
@@ -230,23 +230,23 @@ p {
 
 
 input#ic_rose {
-    background-image: url(/media/ic_rose.png);
+    background-image: url(../img/ic_rose.png);
 }
 input#ic_rose_frag {
-    background-image: url(/media/ic_rose_frag.png);
+    background-image: url(../img/ic_rose_frag.png);
 }
 input#ic_compass {
-    background-image: url(/media/ic_compass.png);
+    background-image: url(../img/ic_compass.png);
 }
 input#ic_bottle_letter {
-    background-image: url(/media/ic_bottle_letter.png);
+    background-image: url(../img/ic_bottle_letter.png);
 }
 input#ic_bottle_heart {
-    background-image: url(/media/ic_bottle_heart.png);
+    background-image: url(../img/ic_bottle_heart.png);
 }
 input#ic_white_whale {
-    background-image: url(/media/ic_white_whale.png);
+    background-image: url(../img/ic_white_whale.png);
 }
 input#ic_whale {
-    background-image: url(/media/ic_whale.png);
+    background-image: url(../img/ic_whale.png);
 }

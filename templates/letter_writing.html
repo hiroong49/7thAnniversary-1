@@ -5,17 +5,20 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'css/letter_writing.css' %}">
+        <meta content="yes" name="apple-mobile-web-app-capable"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+        <script src="https://kit.fontawesome.com/066f39e5ce.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/letter_writing.css' %}">
+        <script type="text/javascript" src="{% static 'js/letter_writing.js' %}"></script>
         <title>LETTER WRITING PAGE</title>
     </head>
     <body>
+        <!--뒤로 가기 버튼-->
         <a href="{% url 'home'%}"><i class="fa-solid fa-chevron-left"></i></a>
 
-        <h1>편지쓰기</h1>
 
-        <form method="post" action="" enctype="multipart/form-data">
+        <form method="post" action="" enctype="multipart/form-data" class="container">
             {% csrf_token %}
             
             {% for field in form %}
@@ -25,21 +28,17 @@
                     <label for="{{field.id_for_label}}">{{field.label}}</label>
                     {% if field.name == "photo" %}
                     
-                        <img id="preview" src="#" style="width: 200px;">
                         <input id="uploadFile" type="file" name="photo" onchange="readFile(event);"/>
+                        <div class="img_container" id="img_container" onclick="inputFile()"><img id="preview" src="{% static 'img/ic_plus_bg.png'%}" style="width: 240px;"></div>
+
                     
                     {% elif field.name == "author" %}
                     
-                        <input type="text" name="author" id="uid" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" required>                        
-                        <button type="button" id="btn-author" onclick="duplicate_check();">닉네임 중복체크</button>
+                        <input type="text" name="author"  id="nickname" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" required>                        
                     
-                    {% elif field.name == "source" %}
-                    <div>
-                        <input type="text" name="source" placeholder="사진의 출처를 기입해주세요. (필수 기입 사항은 아닙니다)">
-                    </div>
                     {% elif field.name == "body" %}
                     <div>
-                        <textarea id="content" name="body" type="text" rows="10" cols="50" placeholder="아티스트에게 모욕적인 표현과 말은 삼가해주세요 "></textarea>                    
+                        <textarea id="content" name="body" type="text" rows="10" cols="50"  placeholder="편지는 몬스타엑스 멤버 한정으로 써 주시고, 아티스트와 팬에게 상처가 될 수 있는 모욕적인 표현과 말, 도배 등은 삼가해주세요" required></textarea>                    
                     </div>
                     {% endif %}
                     {% if field.errors %}
@@ -52,48 +51,5 @@
 
             <input type="submit" id="submit_btn" value='바다에 띄우기'/>
         </form>
-    </body>
-
-    <script type="text/javascript" src="{%static 'js/letter_writing.js'%}"></script>
-
-</html>
-
-
-<!-- vscode 코드 -->
-<!DOCTYPE html>
-<html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="yes" name="apple-mobile-web-app-capable"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">        <link rel="stylesheet" href="letter.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
-        <script src="https://kit.fontawesome.com/066f39e5ce.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="letter.js"></script>
-    </head>
-    <body> 
-        <!--뒤로 가기 버튼-->
-        <a href="../letter_icon/writing.html"><i class="fa-solid fa-chevron-left"></i></a>
-        <div class="container">
-            <div class="div1">
-                <label>닉네임</label>
-                <input type="text" id="nickname" name="userid" rows="1" cols="30" placeholder="닉네임" maxlength="100" required>
-            </div>
-            <div id="div2">
-                <label>사진</label>
-                <!-- <img id="preview" style="width: 200px;"> -->
-                <!-- <input id="uploadFile" type="file" onchange="readFile(event);"/> -->
-                <input id="uploadFile" type="file" accept="image/*" onchange="readFile(event);"/>
-                <div class="img_container" id="img_container" onclick="inputFile()"><img id="preview" src="/media/ic_plus_bg.png" style="width: 240px;"></div>
-            </div>
-            <div class="div3">
-                <label>전할 말</label><br>
-                <textarea id="content" type="text" rows="10" cols="50" placeholder="편지는 몬스타엑스 멤버 한정으로 써 주시고, 아티스트와 팬에게 상처가 될 수 있는 모욕적인 표현과 말, 도배 등은 삼가해주세요" required></textarea>
-            </div>
-        </div>
-        <div class="div4">
-            <!--제출버튼-->
-            <button type="submit" id="submit_btn" disabled="" onclick="submit()">바다에 띄우기</button> 
-        </div>      
     </body>
 </html>
