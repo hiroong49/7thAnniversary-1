@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'HSYuji-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    -webkit-text-size-adjust:none;
+    font-family: 'HSYuji-Regular', 'HSYuji-Regular', 'HSYuji-Regular';
+}
+i {
+    text-decoration: none;
+    color: rgb(244, 244, 255);
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 18px;
+}
+a {
+    text-decoration: none;
+}
+.background {
+    position: fixed;
+    background-position: center;
+    background-image: url(../media/bg_ocean.jpeg);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    display: block;
+    justify-content: center;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+.layer {
+    position: relative;
+    text-align: center;
+    top: 40%;
+}
+#bottle {
+    position: absolute;
+    animation-name: move, fadeOut;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    margin-left: -50px;
+}
+@keyframes move {
+    from { 
+        top: -300px;
+    }
+    to   { 
+        top: -200px;
+    }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0.5; }
+}
+p {
+    color: white;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-delay: 0.5s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    margin-top: 80px;
+    font-size: 18px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
