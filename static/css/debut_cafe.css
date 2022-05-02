@@ -48,7 +48,7 @@ p {
 .container {
     width: 200px;
     height: 150px;
-    background-color: rgb(8, 56, 64);
+    background-color: lightgray;
     border-radius: 40px 40px 40px 40px;
     text-align: center;
     z-index: 0;

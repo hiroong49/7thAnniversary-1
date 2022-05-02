@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -5,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/066f39e5ce.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="debut_cafe.css">
-    <script type="text/javascript" src="debut_cafe.js"></script>
-    <title>Debut Cafe</title>
+  <link rel="stylesheet" href="{% static 'css/debut_cafe.css'%}">
+    <script type="text/javascript" src="{% static 'js/debut_cafe.js'%}"></script>
+      <title>Debut Cafe</title>
 </head>
 <body>
     <!--뒤로 가기 버튼-->
@@ -150,7 +152,6 @@
         </div>
         <div class="div2">
             <p class="msg">* 오류나 수정 사항 있으면 <span><a class="address" href="http://asked.kr/yourmysea514">@you_r_my_sea</a></span>로 문의 주세요</p>
-        </div>
-    </div>
+      </div>
 </body>
 </html>

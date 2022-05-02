@@ -20,6 +20,10 @@ body {
     background-color: #e8e8e8;
 }
 
+button[target="ic_earth"] {
+    color : transparent; 
+}
+
 .bg {
     background-color: rgb(8, 56, 64);
     padding-top: 20px;
@@ -82,73 +86,73 @@ input {
     background-repeat: no-repeat;
 }
 input#ic_hyunwoo {
-    background-image: url(/media/ic_hyunwoo.PNG);
+    background-image: url(../img/ic_hyunwoo.PNG);
 }
 input#ic_minhyuk {
-    background-image: url(/media/ic_minhyuk.PNG);
+    background-image: url(../img/ic_minhyuk.PNG);
 }
 input#ic_kihyun {
-    background-image: url(/media/ic_kihyun.PNG);
+    background-image: url(../img/ic_kihyun.PNG);
 }
 input#ic_hyungwon {
-    background-image: url(/media/ic_hyungwon.PNG);
+    background-image: url(../img/ic_hyungwon.PNG);
 }
 input#ic_joohoney {
-    background-image: url(/media/ic_joohoney.PNG);
+    background-image: url(../img/ic_joohoney.PNG);
 }
 input#ic_changkyun {
-    background-image: url(/media/ic_changkyun.PNG);
+    background-image: url(../img/ic_changkyun.PNG);
 }
 input#ic_paper_boat {
-    background-image: url(/media/ic_paper_boat.PNG);
+    background-image: url(../img/ic_paper_boat.PNG);
 }
 input#ic_rose {
-    background-image: url(/media/ic_rose.png);
+    background-image: url(../img/ic_rose.png);
 }
 input#ic_rose_frag {
-    background-image: url(/media/ic_rose_frag.png);
+    background-image: url(../img/ic_rose_frag.png);
 }
 input#ic_compass {
-    background-image: url(/media/ic_compass.png);
+    background-image: url(../img/ic_compass.png);
 }
 input#ic_bottle_letter {
-    background-image: url(/media/ic_bottle_letter.png);
+    background-image: url(../img/ic_bottle_letter.png);
 }
 input#ic_bottle_heart {
-    background-image: url(/media/ic_bottle_heart.png);
+    background-image: url(../img/ic_bottle_heart.png);
 }
 input#ic_whale {
-    background-image: url(/media/ic_whale.png);
+    background-image: url(../img/ic_whale.png);
 }
 input#ic_boongbbang {
-    background-image: url(/media/ic_boongbbang.png);
+    background-image: url(../img/ic_boongbbang.png);
 }
 input#ic_duck {
-    background-image: url(/media/ic_duck.png);
+    background-image: url(../img/ic_duck.png);
 }
 input#ic_shark {
-    background-image: url(/media/ic_shark.png);
+    background-image: url(../img/ic_shark.png);
 }
 input#ic_moonstar {
-    background-image: url(/media/ic_moonstar.png);
+    background-image: url(../img/ic_moonstar.png);
 }
 input#ic_cake {
-    background-image: url(/media/ic_cake.png);
+    background-image: url(../img/ic_cake.png);
 }
 input#ic_purple_heart {
     background-image: url(../img/ic_purple_heart.png);
 }
 input#ic_hamzzi {
-    background-image: url(/media/ic_hamzzi.png);
+    background-image: url(../img/ic_hamzzi.png);
 }
 input#ic_shootingstar {
-    background-image: url(/media/ic_shootingstar.png);
+    background-image: url(../img/ic_shootingstar.png);
 }
 input#ic_earth {
-    background-image: url(/media/ic_earth.png);
+    background-image: url(../img/ic_earth.png);
 }
 input#ic_socute_cat {
-    background-image: url(/media/ic_socute.PNG);
+    background-image: url(../img/ic_socute.PNG);
 }
 
 /* 핸드폰 */
