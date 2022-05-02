@@ -54,14 +54,6 @@ function inputFile(){
   uploadFile.click();
 }
 
-function writing() {
-  if(document.getElementById("nickname").value == "" || document.getElementById("content").value == "") {
-      document.getElementById("submit_btn").disabled = true;
-  } else {
-      document.getElementById("submit_btn").disabled = false;
-  }
-}
-
 function submit() {
   window.location.href = '../submit_letter/submit.html'
 }
