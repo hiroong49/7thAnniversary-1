@@ -1,0 +1,23 @@
+
+
+img {
+    position: relative;
+    border-radius: 50%;
+    z-index: 1;
+    top: 65px;
+    left: 50px;
+}
+
+.container {
+    width: 200px;
+    height: 150px;
+    background-color: lightgray;
+    border-radius: 40px 40px 40px 40px;
+    text-align: center;
+    z-index: 0;
+}
+
+.div {
+    position: relative;
+    top: 40%;
+}
