@@ -38,9 +38,10 @@ i {
     cursor: pointer;                 
     border-radius: 30px;
     background-size: contain;
-    /* opacity: 0.6; */
+    /*opacity: 0.6;*/
     transition-duration: 0.3s;
     margin: 5px;
+    color: #FF000000;
 }
 
 /* .active, .btn:hover {
