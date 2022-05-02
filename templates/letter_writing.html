@@ -26,20 +26,16 @@
                     {% if field.name == "photo" %}
                     
                         <img id="preview" src="#" style="width: 200px;">
-                        <input id="uploadFile" type="file" name="photo" onchange="readFile(event);"/>
+                        <input id="uploadFile" type="file" name="photo" onchange="readFile(event);" required/>
                     
                     {% elif field.name == "author" %}
                     
-                        <input type="text" name="author" id="uid" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" required>                        
+                        <input type="text" name="author" id="uid" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" required>
                         <button type="button" id="btn-author" onclick="duplicate_check();">닉네임 중복체크</button>
-                    
-                    {% elif field.name == "source" %}
-                    <div>
-                        <input type="text" name="source" placeholder="사진의 출처를 기입해주세요. (필수 기입 사항은 아닙니다)">
-                    </div>
+
                     {% elif field.name == "body" %}
                     <div>
-                        <textarea id="content" name="body" type="text" rows="10" cols="50" placeholder="아티스트에게 모욕적인 표현과 말은 삼가해주세요 "></textarea>                    
+                        <textarea id="content" name="body" type="text" rows="10" cols="50" placeholder="아티스트에게 모욕적인 표현과 말은 삼가해주세요" required></textarea>
                     </div>
                     {% endif %}
                     {% if field.errors %}
