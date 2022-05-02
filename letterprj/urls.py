@@ -28,4 +28,5 @@ urlpatterns = [
     path('letter_writing/', views.writing, name='writing'),
     path('letter_writing/<str:author>/', views.icon, name='icon'),
     path('letter_view/<int:pk>/', views.afterletter, name="afterletter"),
+    path('do_duplicate_check/', views.do_duplicate_check, name='duplicatecheck')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
