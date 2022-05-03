@@ -9,6 +9,11 @@ from .forms import PostForm     # forms.py에서 PostForm 가져오기
 def home(requests):
     return render(requests, 'home.html')
 
+def debutcafe(requests):
+    return render(requests, 'debut_cafe.html')
+
+def submit(requests):
+    return render(requests, 'submit.html')
 
 def afterhome(requests):
     posts = Post.objects.order_by('?')
@@ -29,7 +34,7 @@ def icon(requests, author):
         post = Post.objects.get(author=author)
         post.letter_paper = letter_paper
         post.save()
-        return redirect('home')
+        return redirect('submit')
 
     return render(requests, 'letter_icon.html', {'author': author})
 
