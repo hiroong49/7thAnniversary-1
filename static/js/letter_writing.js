@@ -36,7 +36,7 @@ function duplicate_check(){
     })
 
     // do_duplicate_check 함수에 json 전달
-    var author_input = document.getElementById("uid");
+    var author_input = document.getElementById("nickname");
     $.ajax({
         url: "/do_duplicate_check",
         data: {'author': author_input.value},
@@ -59,7 +59,7 @@ function duplicate_check(){
 }
 
 function submit_check() {
-    var author = document.getElementById("uid");
+    var author = document.getElementById("nickname");
     var photo = document.getElementById("uploadFile");
     var body = document.getElementById("content");
     console.log(photo.value)
