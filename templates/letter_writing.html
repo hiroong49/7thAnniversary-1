@@ -29,18 +29,18 @@
                     <label for="{{field.id_for_label}}">{{field.label}}</label>
                     {% if field.name == "photo" %}
                     
-                        <input id="uploadFile" type="file" name="photo" onchange="readFile(event);" required/>
+                        <input id="uploadFile" type="file" name="photo" onchange="readFile(event);"/>
                         <div class="img_container" id="img_container" onclick="inputFile()"><img id="preview" src="{% static 'img/ic_plus_bg.png'%}" style="width: 240px;"></div>
                     
                     {% elif field.name == "author" %}
                     
-                        <input type="text" class="author_input" name="author" id="uid" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" check_result="fail" required>
+                        <input type="text" class="author_input" name="author" id="uid" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" check_result="fail">
                         <button type="button" class="duplicate_button" id="btn-author" onclick="duplicate_check()">닉네임 중복체크</button>
                         <p id="id_check_success" style="display: none">닉네임 중복 체크 확인</p>
 
                     {% elif field.name == "body" %}
                     <div>
-                        <textarea id="content" name="body" type="text" rows="10" cols="50"  placeholder="편지는 몬스타엑스 멤버 한정으로 써 주시고, 아티스트와 팬에게 상처가 될 수 있는 모욕적인 표현과 말, 도배 등은 삼가해주세요" required></textarea>                    
+                        <textarea id="content" name="body" type="text" rows="10" cols="50"  placeholder="편지는 몬스타엑스 멤버 한정으로 써 주시고, 아티스트와 팬에게 상처가 될 수 있는 모욕적인 표현과 말, 도배 등은 삼가해주세요"></textarea>
                     </div>
                     {% endif %}
                     {% if field.errors %}
