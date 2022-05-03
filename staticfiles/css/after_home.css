@@ -1,0 +1,252 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    width: 100%;
+    margin: 0;
+}
+.background {
+    width: 100%;
+    overflow-x: auto;
+    /* display: block;
+    justify-content: center; */
+}
+.background::before {
+    content: "";
+    display: block;
+    background-size: contain;
+    z-index: -1;
+    animation: bgScrollLeft 1s linear infinite;
+}
+.sliding-background {
+    height: 5000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* 닉네임 출력 */
+p {
+    color: white;
+}
+.duo {
+    position:relative;
+    display: inline-block;
+    text-align: center;
+    animation: infiniteScrollBg 40s linear infinite;
+
+}
+@keyframes infiniteScrollBg {
+    0% {
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 30px;
+    }
+}
+/* 네브바 시작 */
+#menu__toggle {
+    opacity: 0;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;  
+}
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 33px;
+    left: 33px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: lightgray;
+    transition-duration: .25s;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 120px 0;
+    list-style: none;
+    background-color: #2e2d2d;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+    z-index: 1;
+}
+
+/* 네브바 안에 들어가는 내용 */
+/* 검색창 */
+.ic_search {
+    color: lightgray;
+    margin: 24px;
+    font-size: 32sp;
+}
+#mySearch {
+    width: 80%;
+    height: 24px;
+    font-size: 20sp;
+    padding: 16px;
+    border: 1px solid #ddd;
+    background-color: rgb(0, 0, 0);
+    margin-left: 20px;
+    margin-top: 14px;
+}
+/* 데뷔 카페 리스트 */
+.cafe {
+    position: relative;
+    text-decoration: none;
+    color: lightgray;
+    display: block;
+    padding: 12px 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition-duration: .25s;
+    top: 50px;
+}
+.cafe:hover {
+    color: white;
+}
+.cafe.active {
+    color: black;
+}
+/* 개발자 문의 */
+.service {
+    position: relative;
+    text-decoration: none;
+    color: lightgray;
+    display: block;
+    padding: 12px 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition-duration: .25s;
+    top: 80px;
+}
+.service:hover {
+    color: white;
+}
+.service.active {
+    color: black;
+}
+
+
+.btn {
+    background-size: contain;
+    background-color: transparent;
+    border: none;           
+    cursor: pointer;                 
+    transition-duration: 0.3s;
+}
+
+.div1 > duo {
+    display: inline-block;
+    position: absolute;
+}
+
+/* 온라인 웹 디자인 */
+@media ( max-width: 768px ) {  
+    .sliding-background {        
+        background: url(../img/bg_home_sero.jpeg) repeat-y;
+    }
+    .burger-check:checked~.menu {
+        max-width: 250px;
+    }
+    /* .topnav a, .topnav input[type=text] {
+        display: block;
+        float: none;
+        text-align: left;
+        margin: 0;
+        padding: 14px;
+    } */
+    .btn {
+        width: 80px;
+        height: 80px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+
+@media ( min-width: 1024px ) {
+    .sliding-background {
+        background: url(../img/bg_garo.png) repeat;
+    }
+    .burger-check:checked~.menu {
+        max-width: 400px;
+    }
+    .duo {
+        margin: 80px;
+    }
+    .div1 > duo {
+        height: 20px;
+        width: 20px;
+    }
+    .btn {              
+        height: 100px;
+        width: 100px;
+    }
+}
+
+
+
+input#ic_rose {
+    background-image: url(../img/ic_rose.png);
+}
+input#ic_rose_frag {
+    background-image: url(../img/ic_rose_frag.png);
+}
+input#ic_compass {
+    background-image: url(../img/ic_compass.png);
+}
+input#ic_bottle_letter {
+    background-image: url(../img/ic_bottle_letter.png);
+}
+input#ic_bottle_heart {
+    background-image: url(../img/ic_bottle_heart.png);
+}
+input#ic_white_whale {
+    background-image: url(../img/ic_white_whale.png);
+}
+input#ic_whale {
+    background-image: url(../img/ic_whale.png);
+}
