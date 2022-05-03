@@ -65,7 +65,7 @@ function submit_check() {
     console.log(photo.value)
 
     if (author.value == ""){
-        alert("아이디를 입력하세요.");
+        alert("닉네임을 입력하세요.");
         author.focus();
         return false;
     }
