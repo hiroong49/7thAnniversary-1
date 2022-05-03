@@ -5,18 +5,21 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'css/letter_writing.css' %}">
+        <meta content="yes" name="apple-mobile-web-app-capable"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+        <script src="https://kit.fontawesome.com/066f39e5ce.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/letter_writing.css' %}">
+        <script type="text/javascript" src="{% static 'js/letter_writing.js' %}"></script>
         <title>LETTER WRITING PAGE</title>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     </head>
     <body>
+        <!--뒤로 가기 버튼-->
         <a href="{% url 'home'%}"><i class="fa-solid fa-chevron-left"></i></a>
 
-        <h1>편지쓰기</h1>
 
-        <form method="post" id="frm" action="" enctype="multipart/form-data">
+        <form method="post" id="frm" action="" enctype="multipart/form-data" class="container">
             {% csrf_token %}
             
             {% for field in form %}
@@ -26,8 +29,8 @@
                     <label for="{{field.id_for_label}}">{{field.label}}</label>
                     {% if field.name == "photo" %}
                     
-                        <img id="preview" src="#" style="width: 200px;">
                         <input id="uploadFile" type="file" name="photo" onchange="readFile(event);" required/>
+                        <div class="img_container" id="img_container" onclick="inputFile()"><img id="preview" src="{% static 'img/ic_plus_bg.png'%}" style="width: 240px;"></div>
                     
                     {% elif field.name == "author" %}
                     
@@ -37,7 +40,7 @@
 
                     {% elif field.name == "body" %}
                     <div>
-                        <textarea id="content" name="body" type="text" rows="10" cols="50" placeholder="아티스트에게 모욕적인 표현과 말은 삼가해주세요" required></textarea>
+                        <textarea id="content" name="body" type="text" rows="10" cols="50"  placeholder="편지는 몬스타엑스 멤버 한정으로 써 주시고, 아티스트와 팬에게 상처가 될 수 있는 모욕적인 표현과 말, 도배 등은 삼가해주세요" required></textarea>                    
                     </div>
                     {% endif %}
                     {% if field.errors %}
@@ -51,7 +54,4 @@
             <input type="button" id="submit_btn" onclick="submit_check()" value='바다에 띄우기'/>
         </form>
     </body>
-
-    <script type="text/javascript" src="{%static 'js/letter_writing.js'%}"></script>
-
 </html>
