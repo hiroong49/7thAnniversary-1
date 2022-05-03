@@ -28,7 +28,7 @@ function inputFile(){
 }
 
 function duplicate_check(){
-    var author_input = document.getElementById("uid");
+    var author_input = document.getElementById("nickname");
     if (author_input.value == ""){
                 alert("아이디를 입력하세요.");
                 author_input.focus();
@@ -65,13 +65,13 @@ function duplicate_check(){
 }
 
 function submit_check() {
-    var author = document.getElementById("uid");
+    var author = document.getElementById("nickname");
     var photo = document.getElementById("uploadFile");
     var body = document.getElementById("content");
     console.log(photo.value)
 
     if (author.value == ""){
-        alert("아이디를 입력하세요.");
+        alert("닉네임을 입력하세요.");
         author.focus();
         return false;
     }
