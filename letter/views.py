@@ -15,6 +15,9 @@ def debutcafe(requests):
 def submit(requests):
     return render(requests, 'submit.html')
 
+def customerservice(requests):
+    return render(requests, 'customer_service.html')
+
 def afterhome(requests):
     posts = Post.objects.order_by('?')
     return render(requests, 'after_home.html', {'posts': posts})

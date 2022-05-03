@@ -31,4 +31,5 @@ urlpatterns = [
     path('do_duplicate_check/', views.do_duplicate_check, name='duplicatecheck'),
     path('debut_cafe/', views.debutcafe, name="debutcafe"),
     path('submit/', views.submit, name="submit"),
+    path('customer_service/', views.customerservice, name="customerservice"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
