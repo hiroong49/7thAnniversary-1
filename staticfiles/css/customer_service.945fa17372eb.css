@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'HSYuji-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    -webkit-text-size-adjust:none;
+    font-family: 'HSYuji-Regular', 'HSYuji-Regular', 'HSYuji-Regular';
+}
+i {
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: larger;
+}
+div {
+    text-align: center;
+}
+.btn_box {
+    padding: 20px;
+}
+button {
+    background-color: rgb(8, 56, 64);
+    color: white;
+    border-radius: 20px 20px 20px 20px;
+}
+p {
+    margin-top: 30px;
+    color: gray;
+}
+button:hover {
+    background-color: rgb(250, 243, 225);
+    color: black;
+}
+button:visited {
+    background-color: rgb(8, 56, 64);
+    color: white;
+}
+/* 핸드폰 */
+@media ( max-width: 767px ) {
+    img {
+        width: 200px;
+        border-radius: 50%;
+        margin-top: 10%;
+    }
+    button {
+        margin: 20px;
+        width: 200px;
+        height: 50px;
+    }
+}
+@media ( min-width: 412px ) and ( max-width: 768px ) {
+    
+}
+/* 테블릿 세로 */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+/* 테블릿 가로 */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
+/* 데스크탑 */
+@media ( min-width: 1024px ) {
+    img {
+        width: 300px;
+        border-radius: 50%;
+        margin-top: 5%;
+    }
+    button {
+        margin: 20px;
+        width: 200px;
+        height: 50px;
+    }
+}
