@@ -39,7 +39,7 @@ i {
 .div4 {
     text-align: center;
 }
-#uid {
+#nickname {
     height: 40px;
     background-color: rgb(49, 49, 49);
     color: white;
@@ -96,7 +96,7 @@ textarea {
     .add_btn::after {
         padding-bottom: 80%;
     }
-    #uid {
+    #nickname {
         width: 80%;
     }
     textarea {
@@ -132,7 +132,7 @@ textarea {
         width: 600px;
         margin-bottom: 30px;
     }
-    #uid {
+    #nickname {
         width: 300px;
     }
     #submit_btn {
