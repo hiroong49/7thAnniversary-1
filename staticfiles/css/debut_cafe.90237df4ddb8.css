@@ -11,6 +11,9 @@
     -webkit-text-size-adjust:none;
     font-family: 'HSYuji-Regular', 'HSYuji-Regular', 'HSYuji-Regular';
 }
+body {
+    background-color: white;
+}
 i {
     text-decoration: none;
     color: black;
@@ -18,31 +21,44 @@ i {
     margin-left: 10px;
     font-size: larger;
 }
-a, a:link, a:visited {
+h2 {
+    position: relative;
+    left: 7%;
+    top: 7%;
+}
+a {
     text-decoration: none;
+    color: rgb(250, 243, 225);
+    font-size: 18px;
 }
-div {
-    text-align: center;
-}
-.btn_box {
-    padding: 20px;
-}
-button {
-    background-color: rgb(8, 56, 64);
-    color: white;
-    border-radius: 20px 20px 20px 20px;
+img {
+    position: relative;
+    border-radius: 50%;
+    z-index: 1;
+    top: 65px;
+    left: 50px;
 }
 p {
-    margin-top: 30px;
-    color: gray;
+    color: rgb(250, 243, 225);
 }
-button:hover {
-    background-color: rgb(250, 243, 225);
-    color: black;
+.contents {
+    position: relative;
+    top: -50px;
 }
-button:visited {
+.container {
+    width: 200px;
+    height: 150px;
     background-color: rgb(8, 56, 64);
-    color: white;
+    border-radius: 40px 40px 40px 40px;
+    text-align: center;
+    z-index: 0;
+}
+.div {
+    position: relative;
+    top: 40%;
+}
+.div1 {
+    margin: auto 20%;
 }
 .div2 {
     text-align: center;
@@ -50,28 +66,14 @@ button:visited {
 .msg {
     color: gray;
     font-size: 14px;
-    margin-top: 80px;
+    margin: 50px;
 }
-.msg2 {
-    color: gray;
-    font-size: 11px;
-    margin-top: 10px;
-}
-#address {
+.address {
     color: rgb(8, 56, 64);
 }
 /* 핸드폰 */
 @media ( max-width: 767px ) {
-    img {
-        width: 200px;
-        border-radius: 50%;
-        margin-top: 10%;
-    }
-    button {
-        margin: 20px;
-        width: 200px;
-        height: 50px;
-    }
+    
 }
 @media ( min-width: 412px ) and ( max-width: 768px ) {
     
@@ -86,14 +88,7 @@ button:visited {
 }
 /* 데스크탑 */
 @media ( min-width: 1024px ) {
-    img {
-        width: 300px;
-        border-radius: 50%;
-        margin-top: 5%;
-    }
-    button {
-        margin: 20px;
-        width: 200px;
-        height: 50px;
+    .contents {
+        left: 10%;
     }
 }
