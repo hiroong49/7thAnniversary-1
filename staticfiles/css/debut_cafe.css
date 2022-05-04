@@ -11,9 +11,9 @@
     -webkit-text-size-adjust:none;
     font-family: 'HSYuji-Regular', 'HSYuji-Regular', 'HSYuji-Regular';
 }
-/* body {
-    background-color: #e8e8e8;
-} */
+body {
+    background-color: white;
+}
 i {
     text-decoration: none;
     color: black;
