@@ -34,7 +34,7 @@
                     
                     {% elif field.name == "author" %}
                     
-                        <input type="text" class="author_input" name="author" id="nickname" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" check_result="fail">
+                        <input type="text" class="author_input" id="author_input" name="author" rows="1" cols="30" placeholder="닉네임을 입력해주세요" maxlength="100" check_result="fail">
                         <button type="button" class="duplicate_button" id="btn-author" onclick="duplicate_check()">중복체크</button>
                         <img id="id_check_success" style="display: none" src="{% static 'img/check_nickname.png'%}"></img>
 
@@ -50,8 +50,9 @@
             </div>
         </div>
             {% endfor%}
-
-            <input type="button" id="submit_btn" onclick="submit_check()" value='바다에 띄우기'/>
+            <div class="div3">
+                <input type="button" id="submit_btn" onclick="submit_check()" value='바다에 띄우기'/>
+            </div>
         </form>
     </body>
 </html>
