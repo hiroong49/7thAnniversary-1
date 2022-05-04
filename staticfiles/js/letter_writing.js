@@ -100,4 +100,3 @@ function submit_check() {
         return false;
     }
 }
-
