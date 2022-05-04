@@ -28,13 +28,6 @@ function inputFile(){
 }
 
 function duplicate_check(){
-    var author_input = document.getElementById("nickname");
-    if (author_input.value == ""){
-                alert("아이디를 입력하세요.");
-                author_input.focus();
-                return false;
-    }
-
     // 닉네임을 변경했을 경우
     $('.author_input').change(function () {
             $('#id_check_success').hide();
