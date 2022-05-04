@@ -11,9 +11,9 @@
     -webkit-text-size-adjust:none;
     font-family: 'HSYuji-Regular', 'HSYuji-Regular', 'HSYuji-Regular';
 }
-/* body {
-    background-color: #e8e8e8;
-} */
+body {
+    background-color: white;
+}
 i {
     text-decoration: none;
     color: black;
@@ -48,7 +48,7 @@ p {
 .container {
     width: 200px;
     height: 150px;
-    background-color: lightgray;
+    background-color: rgb(8, 56, 64);
     border-radius: 40px 40px 40px 40px;
     text-align: center;
     z-index: 0;
