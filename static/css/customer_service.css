@@ -18,6 +18,9 @@ i {
     margin-left: 10px;
     font-size: larger;
 }
+a, a:link, a:visited {
+    text-decoration: none;
+}
 div {
     text-align: center;
 }
@@ -40,6 +43,22 @@ button:hover {
 button:visited {
     background-color: rgb(8, 56, 64);
     color: white;
+}
+.div2 {
+    text-align: center;
+}
+.msg {
+    color: gray;
+    font-size: 14px;
+    margin-top: 80px;
+}
+.msg2 {
+    color: gray;
+    font-size: 11px;
+    margin-top: 10px;
+}
+#address {
+    color: rgb(8, 56, 64);
 }
 /* 핸드폰 */
 @media ( max-width: 767px ) {
