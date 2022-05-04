@@ -51,7 +51,19 @@ i {
     position: relative;
     top: -20px;
 }
-
+.duplicate_button {
+    width: auto;
+    height: 40px;
+    background-color: rgb(83, 83, 83);
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+#id_check_success {
+    position: relative;
+    height: 30px;
+    width: auto;
+    top: 10px;
+}
 .img_container {
     width: 250px;
     height: auto;
