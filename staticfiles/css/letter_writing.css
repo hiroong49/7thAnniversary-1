@@ -33,6 +33,10 @@ i {
 .div2 {
     vertical-align: middle;
 }
+.div3 {
+    position: relative;
+    left: 15px;
+}
 .author_input {
     height: 40px;
     background-color: rgb(49, 49, 49);
@@ -104,7 +108,7 @@ textarea {
         padding-bottom: 80%;
     }
     .author_input {
-        width: 70%;
+        width: 60%;
     }
     textarea {
         width: 97%;
