@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from letter import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.static import serve
 
 
 urlpatterns = [
@@ -32,4 +33,6 @@ urlpatterns = [
     path('debut_cafe/', views.debutcafe, name="debutcafe"),
     path('submit/', views.submit, name="submit"),
     path('customer_service/', views.customerservice, name="customerservice"),
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root':settings.MEDIA_ROOT}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

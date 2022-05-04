@@ -36,7 +36,7 @@
 .background {
     position: fixed;
     background-position: center;
-    background-image: url(../img/bg_ocean.jpeg);
+    background-image: url("../img/bg_ocean.e57618436c71.jpeg");
     width: 100vw;
     height: 100vh;
     overflow: hidden;

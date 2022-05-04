@@ -151,7 +151,6 @@ a {
     font-size: 18px;
     transition-duration: .25s;
     top: 50px;
-    font-size: 1.5em;
 }
 .cafe:hover {
     color: white;
@@ -169,7 +168,6 @@ a {
     font-size: 18px;
     transition-duration: .25s;
     top: 80px;
-    font-size: 1.5em;
 }
 .service:hover {
     color: white;
