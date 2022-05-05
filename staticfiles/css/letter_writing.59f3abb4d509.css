@@ -33,18 +33,13 @@ i {
 .div2 {
     vertical-align: middle;
 }
-.div3 {
-    margin-top: 30px;
-}
-.div4 {
-    text-align: center;
-}
-#nickname {
+.author_input {
     height: 40px;
     background-color: rgb(49, 49, 49);
     color: white;
     padding-left: 10px;
     margin-left: 10px;
+    border-radius: 10px 10px 10px 10px;
 }
 #uploadFile{
     visibility: hidden;
@@ -54,11 +49,15 @@ i {
 .duplicate_button {
     width: auto;
     height: 40px;
-    background-color: white;
+    background-color: rgb(83, 83, 83);
+    color: white;
+    border-radius: 10px 10px 10px 10px;
 }
 #id_check_success {
-    height: 40px;
+    position: relative;
+    height: 30px;
     width: auto;
+    top: 10px;
 }
 .img_container {
     width: 250px;
@@ -81,7 +80,7 @@ textarea {
 #submit_btn {
     background-color: black;
     color: white;
-    border-radius: 50px;
+    border-radius: 50px 50px 50px 50px;
     margin-top: 30px;
     margin-bottom: 30px;
     height: 60px;
@@ -104,26 +103,62 @@ textarea {
     .add_btn::after {
         padding-bottom: 80%;
     }
-    #nickname {
-        width: 80%;
+    .author_input {
+        width: 70%;
     }
     textarea {
         width: 97%;
     }
     #submit_btn {
         width: 90%;
+        margin: auto;
     }
-}
-@media ( min-width: 412px ) and ( max-width: 768px ) {
-    
 }
 /* 테블릿 세로 */
 @media (min-width: 768px) and (max-width: 991px) {
-    
+    .container {
+        position: relative;
+        top: 50px;
+        left: 20%;
+    }
+    .add_btn {
+        width: 300px;
+        height: 300px;
+    }
+    textarea {
+        width: 600px;
+        margin-bottom: 30px;
+    }
+    #nickname {
+        width: 300px;
+    }
+    #submit_btn {
+        width: 90%;
+        margin: auto;
+    }
 }
 /* 테블릿 가로 */
 @media (min-width: 992px) and (max-width: 1199px) {
-    
+    .container {
+        position: relative;
+        top: 50px;
+        left: 30%;
+    }
+    .add_btn {
+        width: 300px;
+        height: 300px;
+    }
+    textarea {
+        width: 600px;
+        margin-bottom: 30px;
+    }
+    #nickname {
+        width: 300px;
+    }
+    #submit_btn {
+        width: 90%;
+        margin: auto;
+    }
 }
 /* 데스크탑 */
 @media ( min-width: 1024px ) {
@@ -140,7 +175,7 @@ textarea {
         width: 600px;
         margin-bottom: 30px;
     }
-    #nickname {
+    .author_input {
         width: 300px;
     }
     #submit_btn {

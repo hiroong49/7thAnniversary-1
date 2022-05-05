@@ -37,7 +37,7 @@ i {
     position: relative;
     left: 15px;
 }
-#nickname {
+.author_input {
     height: 40px;
     background-color: rgb(49, 49, 49);
     color: white;
@@ -107,7 +107,7 @@ textarea {
     .add_btn::after {
         padding-bottom: 80%;
     }
-    #nickname {
+    .author_input {
         width: 60%;
     }
     textarea {
@@ -179,7 +179,7 @@ textarea {
         width: 600px;
         margin-bottom: 30px;
     }
-    #nickname {
+    .author_input {
         width: 300px;
     }
     #submit_btn {
