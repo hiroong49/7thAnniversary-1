@@ -28,7 +28,6 @@ i {
 
 .nickname {
     font-weight: bold;
-    font-size: 18px;
 }
 
 .div_photo {
@@ -48,7 +47,7 @@ i {
 
 .text {
     position: relative;
-    color: rgb(228, 228, 228);
+    color: white;
 }
 
 /* 핸드폰 */

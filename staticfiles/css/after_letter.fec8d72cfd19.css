@@ -28,7 +28,6 @@ i {
 
 .nickname {
     font-weight: bold;
-    font-size: 18px;
 }
 
 .div_photo {
@@ -38,8 +37,6 @@ i {
 .letter_black {
     background-color: #2e2d2d;
     margin: 0 auto;
-    overflow: scroll;
-    line-height: 150%;
 }
 
 .letter_ivory {
@@ -48,7 +45,6 @@ i {
 
 .text {
     position: relative;
-    color: rgb(228, 228, 228);
 }
 
 /* 핸드폰 */
@@ -75,6 +71,7 @@ i {
         border-radius: 20px;
     }
     .text {
+        top: 15px;
         left: 5%;
         margin-right: 30px;
     }
@@ -111,6 +108,7 @@ i {
         min-height: 200px;
     }
     .text {
+        top: 20px;
         left: 20px;
         margin-right: 50px;
     }
