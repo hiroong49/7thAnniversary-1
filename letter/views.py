@@ -9,18 +9,17 @@ from .forms import PostForm     # forms.py에서 PostForm 가져오기
 def home(requests):
     return render(requests, 'home.html')
 
+
 def debutcafe(requests):
     return render(requests, 'debut_cafe.html')
+
 
 def submit(requests):
     return render(requests, 'submit.html')
 
+
 def customerservice(requests):
     return render(requests, 'customer_service.html')
-
-def afterhome(requests):
-    posts = Post.objects.order_by('?')
-    return render(requests, 'after_home.html', {'posts': posts})
 
 
 @csrf_exempt
@@ -72,6 +71,15 @@ def do_duplicate_check(request):
         duplicate = "fail"
     context = {'duplicate': duplicate}
     return JsonResponse(context)
+
+
+def afterhome(requests):
+    posts = Post.objects.order_by('?')
+    if 'q' in requests.GET:
+        search_content = requests.GET.get('q', '')
+        queryset = posts.filter(author__contains=search_content)
+        posts = queryset
+    return render(requests, 'after_home.html', {'posts': posts})
 
 
 def afterletter(requests, pk):  # request와 pk도 인자로 받음
