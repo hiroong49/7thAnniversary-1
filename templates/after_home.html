@@ -21,10 +21,11 @@
     
         <ul class="menu__box">
             <a class="ic_search"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;Search</a>
-            <li><input type="text" id="mySearch" onkeyup="search()" placeholder="닉네임으로 편지 찾기" title="Type in a category">
-            </li>
+            <li><form action="" method="get">
+                <input type="text" id="mySearch" name="q" placeholder="닉네임으로 편지 찾기" title="Type in a category">
+            </form></li>
             <li><a class="cafe" href="{% url 'debutcafe' %}">데뷔 카페 리스트</a></li>
-            <li><a class="service" href="#">개발자 문의</a></li>
+            <li><a class="service" href="{% url 'customerservice' %}">개발자 문의</a></li>
         </ul>
     </div>
     <!-- 배경화면 설정 -->

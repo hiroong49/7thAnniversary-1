@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/066f39e5ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'css/customer_service.css'%}">
+    <title>개발자 문의</title>
+</head>
+<body>
+    <!--뒤로 가기 버튼-->
+    <a href="{%url 'home'%}"><i class="fa-solid fa-chevron-left"></i></a>
+    <div>
+        <div>
+            <img src="{% static 'img/img_profile.jpeg' %}">
+        </div>
+        <div>
+            <p>you_r_my_sea</p>
+        </div>
+        <div>
+            <ul class="btn_box">
+                <li><button onclick="window.open('https://twitter.com/you_r_my_sea')">Twitter</button></li>
+                <li><button onclick="window.open('https://pushoong.com/ask/9240546810')">Pushoong</button></li>
+                <li><button onclick="window.open('http://asked.kr/yourmysea514')">Asked</button></li>
+            </ul>
+        </div>
+        <div class="div2">
+            <p class="msg">made by <a class="address" href="https://twitter.com/monji_hantall">먼지</a>, <a class="address" href="https://www.instagram.com/sa46lll12/">명현</a>, <a class="address" href="https://www.instagram.com/hyojeong_sss/">효정</a></p>
+            <p class="msg2">Thanks to 솔, 기절, 교옹, 꿍라, 제리</p>
+        </div>
+    </div>
+</body>
+</html>

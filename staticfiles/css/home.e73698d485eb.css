@@ -1,0 +1,318 @@
+@font-face {
+    font-family: 'LAB디지털';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HSYuji-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    -webkit-text-size-adjust:none;
+    /* font-family: 'LeeSeoyun', 'LeeSeoyun', 'LeeSeoyun'; */
+    font-family: 'HSYuji-Regular', 'HSYuji-Regular', 'HSYuji-Regular';
+    /* font-family: '나눔손글씨 초딩희망', 'Nanum CoDingHeuiMang', 'Nanum CoDingHeuiMang'; */
+}
+
+.background {
+    position: fixed;
+    background-position: center;
+    background-image: url("../img/bg_ocean.e57618436c71.jpeg");
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    display: block;
+    justify-content: center;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+.layer {
+    display: block;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+a {
+    text-decoration: none;
+}
+.section .logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 5%;
+    left: 5%;
+    font-weight: bold;
+}   
+.logo:link, .logo:visited  {
+    color: white;
+}
+/* 네브바 시작 */
+#menu__toggle {
+    opacity: 0;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;  
+}
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 33px;
+    left: 33px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: lightgray;
+    transition-duration: .25s;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 100px 15px;
+    list-style: none;
+    background-color: #2e2d2d;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+    z-index: 1;
+}
+
+/* 네브바 안에 들어가는 내용 */
+/* 데뷔 카페 리스트 */
+.cafe {
+    position: relative;
+    text-decoration: none;
+    color: lightgray;
+    display: block;
+    padding: 12px 24px;
+    font-size: 18px;
+    transition-duration: .25s;
+    top: 50px;
+}
+.cafe:hover {
+    color: white;
+}
+.cafe.active {
+    color: black;
+}
+/* 개발자 문의 */
+.service {
+    position: relative;
+    text-decoration: none;
+    color: lightgray;
+    display: block;
+    padding: 12px 24px;
+    font-size: 18px;
+    transition-duration: .25s;
+    top: 80px;
+}
+.service:hover {
+    color: white;
+}
+.service.active {
+    color: black;
+}
+
+#annaeText {
+    color: white;
+}
+#demo {
+    display: grid;
+    position: relative;
+    text-align: center;
+    color: white;
+    place-items: center;
+    font-family: 'LAB디지털', 'LABDigital', 'LAB디지털';
+}
+.float_letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.float_letter:link, .float_letter:visited {
+    color: white;
+}
+.float_letter:hover {
+    color: lightgray;
+}
+
+/* 온라인 웹 디자인 */
+@media ( max-width: 767px ) {
+    .section {
+        padding: 28px 25px;
+    }
+    #annaeText {
+        text-align: center;
+        margin-top: 50%;
+        margin-left: 15%;
+        margin-right: 15%;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        line-height: 150%;
+    }
+    #demo {
+        margin-top: 60px;
+        font-size: 4rem;
+    }
+    .float_letter {
+        font-size: 24px;
+        margin-top: 80px;
+    }
+    .header {
+        position: fixed;
+        height: 80px;
+        width: 1720px;
+        margin: 0px auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* 테블릿 세로 */
+    /* .section .logo {
+        font-size: 21px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }   */
+    #annaeText {
+        text-align: center;
+        margin-top: 30%;
+        font-size: 24px;
+        margin-left: 15%;
+        margin-right: 15%;
+        color: rgb(255, 255, 255);
+    }
+    #demo {
+        font-size: 7rem;
+    }
+    .float_letter {
+        font-size: 24px;
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* 테블릿 가로 */
+    #annaeText {
+        position: relative;
+        text-align: center;
+        place-items: center;
+        font-size: 24px;
+        margin-bottom: -40px;
+    }
+    #demo {
+        min-height: 10vh;
+        font-size: 7rem;
+    }
+    .float_letter {
+        font-size: 24px;
+        margin-top: 80px;
+    }
+}
+@media ( min-width: 1024px ) {
+    .background {
+        display: block;
+        justify-content: center;
+    }
+    /* .header {
+        position: fixed;
+        height: 80px;
+        width: 1720px;
+        margin: 0px auto;
+    } */
+
+    #div1 {
+        position: relative;
+        top: 25%;
+    }
+
+    #annaeText {
+        position: relative;
+        text-align: center;
+        place-items: center;
+        font-size: 2rem;
+        margin-bottom: -40px;
+    }
+    #demo {
+        min-height: 10vh;
+        font-size: 7rem;
+    }
+    .float_letter {
+        position: relative;
+        top: 25%;
+        font-size: 2rem;
+    }
+    
+    /* .section {
+        height: 100%;
+        width: 100%;
+        font-size: 0px;
+    }
+    
+    .section .logo {
+        font-size: 24px;
+        margin-left: 30px;
+        margin-top: 25px;
+    }    */
+}
