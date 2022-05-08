@@ -80,6 +80,7 @@ textarea {
     padding: 20px;
     line-height: 150%;
     font-size: 16px;
+    white-space: pre-wrap;
 }
 #submit_btn {
     background-color: black;
