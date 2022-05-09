@@ -226,57 +226,42 @@ p {
     cursor: pointer;                 
     transition-duration: 0.3s;
 }
-.ocean-background {
-    text-align: center;
-}
-.container {
-    display: inline-block;
-    /* border: 2px solid white;     */
-    /* animation: floating 4s ease-in-out infinite; */
-}
-.container > duo {
+
+.div1 > duo {
     display: inline-block;
     position: absolute;
 }
-/* @keyframes floating {
-    from { transform: translate(-5px,  -5px); }
-    65%  { transform: translate(10px, 0px); }
-    to   { transform: translate(-5px, -5px); }
-} */
 
 /* 온라인 웹 디자인 */
 @media ( max-width: 768px ) {  
     .sliding-background {        
-        background: url(../img/bg_sky_phone.png);
+        background: url("../img/bg_sky_phone.c09232b6512a.png");
         background-position: center 0;
         background-repeat: no-repeat;
     }
     .ocean-background {
-        background-image: url(../img/bg_ocean_phone.png);
+        background-image: url("../img/bg_ocean_phone.089c3cfd04e5.png");
     }
     .burger-check:checked~.menu {
         max-width: 250px;
     }
-    .duo {
-        margin: 40px;
-        text-align: center;
+    .btn {
+        width: 80px;
+        height: 80px;
     }
     p {
-        font-size: 14px;
-        position: relative;
-        width: 100px;
-        line-height: 150%;
+        font-size: 15px;
     }
 }
 
 @media ( min-width: 1024px ) {
     .sliding-background {        
-        background: url(../img/bg_nightsky_desktop.png);
+        background: url("../img/bg_nightsky_desktop.b8e3d766c07a.png");
         background-position: center 0;
         background-repeat: no-repeat;
     }
     .ocean-background {
-        background-image: url(../img/bg_ocean_desktop.png);
+        background-image: url("../img/bg_ocean_desktop.abde7771782e.png");
         background-repeat: repeat-y;
         position: relative;
         top: 520px;
@@ -289,11 +274,13 @@ p {
     }
     .duo {
         margin: 80px;
-        text-align: center;
     }
-    p {
-        position: relative;
-        width: 150px;
-        line-height: 150%;
+    .div1 > duo {
+        height: 20px;
+        width: 20px;
+    }
+    .btn {              
+        height: 100px;
+        width: 100px;
     }
 }

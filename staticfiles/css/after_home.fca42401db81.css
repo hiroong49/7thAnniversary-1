@@ -232,27 +232,27 @@ p {
 .container {
     display: inline-block;
     /* border: 2px solid white;     */
-    /* animation: floating 4s ease-in-out infinite; */
+    animation: floating 4s ease-in-out infinite;
 }
 .container > duo {
     display: inline-block;
     position: absolute;
 }
 /* @keyframes floating {
-    from { transform: translate(-5px,  -5px); }
-    65%  { transform: translate(10px, 0px); }
-    to   { transform: translate(-5px, -5px); }
+    from { transform: translate(0px,  0px); }
+    65%  { transform: translate(15px, 0px); }
+    to   { transform: translate(-0, 0px); }
 } */
 
 /* 온라인 웹 디자인 */
 @media ( max-width: 768px ) {  
     .sliding-background {        
-        background: url(../img/bg_sky_phone.png);
+        background: url("../img/bg_sky_phone.c09232b6512a.png");
         background-position: center 0;
         background-repeat: no-repeat;
     }
     .ocean-background {
-        background-image: url(../img/bg_ocean_phone.png);
+        background-image: url("../img/bg_ocean_phone.089c3cfd04e5.png");
     }
     .burger-check:checked~.menu {
         max-width: 250px;
@@ -271,12 +271,12 @@ p {
 
 @media ( min-width: 1024px ) {
     .sliding-background {        
-        background: url(../img/bg_nightsky_desktop.png);
+        background: url("../img/bg_nightsky_desktop.b8e3d766c07a.png");
         background-position: center 0;
         background-repeat: no-repeat;
     }
     .ocean-background {
-        background-image: url(../img/bg_ocean_desktop.png);
+        background-image: url("../img/bg_ocean_desktop.abde7771782e.png");
         background-repeat: repeat-y;
         position: relative;
         top: 520px;

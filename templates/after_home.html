@@ -24,15 +24,19 @@
             <li><input type="text" id="mySearch" onkeyup="search()" placeholder="닉네임으로 편지 찾기" title="Type in a category">
             </li>
             <li><a class="cafe" href="{% url 'debutcafe' %}">데뷔 카페 리스트</a></li>
-            <li><a class="service" href="{% url 'customerservice' %}">개발자 문의</a></li>
+            <li><a class="service" href="{% url 'customerservice' %}">Contact</a></li>
         </ul>
     </div>
     <!-- 배경화면 설정 -->
     <div class="background">
-        <!-- 편지지 아이콘 떠다니기 -->
         <div class="sliding-background">
+            <span>" 넌 나의 바다, 꿈을 꿔 </span><br>
+            <span>사랑한다 사랑한다 사랑한다 "</span>
+        </div>
+        <!-- 편지지 아이콘 떠다니기 -->
+        <div class="ocean-background">
         {% for post in posts %}
-            <div class="div1">
+            <div class="container">
                 <a href="/letter_view/{{ post.pk }}/">
                     <div class="duo" id="duo">
                         <!-- 이미지 -->
@@ -44,7 +48,6 @@
         {% endfor%}
         </div>
     </div>
-
     
 </body>
 </html>
