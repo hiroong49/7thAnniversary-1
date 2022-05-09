@@ -9,11 +9,14 @@ from .forms import PostForm     # forms.py에서 PostForm 가져오기
 def home(requests):
     return render(requests, 'home.html')
 
+
 def debutcafe(requests):
     return render(requests, 'debut_cafe.html')
 
+
 def submit(requests):
     return render(requests, 'submit.html')
+
 
 def customerservice(requests):
     return render(requests, 'customer_service.html')
