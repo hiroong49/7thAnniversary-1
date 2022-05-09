@@ -10,6 +10,8 @@
     list-style: none;
     -webkit-text-size-adjust:none;
     font-family: 'HSYuji-Regular', 'HSYuji-Regular', 'HSYuji-Regular';
+    line-height: 200%;
+
 }
 body {
     background-color: #e8e8e8;
@@ -48,7 +50,6 @@ i {
 .text {
     position: relative;
     color: rgb(228, 228, 228);
-    line-height: 200%;
 }
 
 /* 핸드폰 */

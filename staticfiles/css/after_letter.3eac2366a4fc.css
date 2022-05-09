@@ -13,6 +13,8 @@
 }
 body {
     background-color: #e8e8e8;
+    line-height: 200%;
+    font-size: 25px;
 }
 i {
     text-decoration: none;
@@ -48,7 +50,6 @@ i {
 .text {
     position: relative;
     color: rgb(228, 228, 228);
-    line-height: 200%;
 }
 
 /* 핸드폰 */
