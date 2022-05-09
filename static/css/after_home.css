@@ -232,17 +232,17 @@ p {
 .container {
     display: inline-block;
     /* border: 2px solid white;     */
-    /* animation: floating 4s ease-in-out infinite; */
+    animation: floating 4s ease-in-out infinite;
 }
 .container > duo {
     display: inline-block;
     position: absolute;
 }
-/* @keyframes floating {
+@keyframes floating {
     from { transform: translate(-5px,  -5px); }
     65%  { transform: translate(10px, 0px); }
     to   { transform: translate(-5px, -5px); }
-} */
+}
 
 /* 온라인 웹 디자인 */
 @media ( max-width: 768px ) {  
