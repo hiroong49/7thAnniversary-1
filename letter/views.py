@@ -21,10 +21,14 @@ def submit(requests):
 def customerservice(requests):
     return render(requests, 'customer_service.html')
 
+
 def afterhome(requests):
     posts = Post.objects.order_by('?')
+    if 'q' in requests.GET:
+        search_content = requests.GET.get('q', '')
+        queryset = posts.filter(author__contains=search_content)
+        posts = queryset
     return render(requests, 'after_home.html', {'posts': posts})
-
 
 @csrf_exempt
 def icon(requests, author):
