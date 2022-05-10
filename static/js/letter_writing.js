@@ -62,6 +62,7 @@ function duplicate_check(){
             }
         }
     });
+
 }
 
 function submit_check() {
@@ -94,9 +95,18 @@ function submit_check() {
         $('.username_input').focus();
         return false;
     }
-    // 폼 submit
+
+    // 폼 submit (2022/4/11 종료)
+    /*
     else if ($('.author_input').attr("check_result") == "success") {
         document.getElementById('frm').submit();
         return false;
+    }
+     */
+
+    // 서비스 종료 (2022/4/11~)
+    else {
+        alert("5월 11일부로 서비스가 종료되었습니다. 항해 페이지로 이동합니다.");
+        window.location.href = '../seayouletter';
     }
 }
