@@ -253,6 +253,7 @@ p {
     }
     .ocean-background {
         background-image: url(../img/bg_ocean_phone.png);
+        background-repeat: round;
     }
     .burger-check:checked~.menu {
         max-width: 250px;
@@ -274,10 +275,12 @@ p {
         background: url(../img/bg_nightsky_desktop.png);
         background-position: center 0;
         background-repeat: no-repeat;
+        background-size: 100%;
     }
     .ocean-background {
         background-image: url(../img/bg_ocean_desktop.png);
-        background-repeat: repeat-y;
+        background-repeat: round;
+        background-size: 100%;
         position: relative;
         top: 520px;
         left: 0;
