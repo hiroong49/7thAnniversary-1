@@ -16,12 +16,24 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     -webkit-text-size-adjust:none;
-    font-family: 'HSYuji-Regular', 'HSYuji-Regular', 'HSYuji-Regular';
+    font-family: 'GangwonEdu_OTFBoldA', 'GangwonEdu_OTFBoldA', 'GangwonEdu_OTFBoldA';
 }
 body {
     width: 100%;
@@ -50,7 +62,7 @@ body {
     background-size: 100%;
 }
 .ocean-background {
-    height: 1000px;
+    height: 10000px;
     background-repeat: repeat-y round;    
     position: relative;
     top: 380px;
@@ -86,6 +98,8 @@ span {
 /* 닉네임 출력 */
 p {
     color: white;
+    font-size: 18px;
+    font-weight: 800;
 }
 .duo {
     position:relative;
@@ -234,6 +248,7 @@ p {
     display: inline-block;
     /* border: 2px solid white;     */
     animation: floating 4s ease-in-out infinite;
+    text-align: center;
 }
 .container > duo {
     display: inline-block;
@@ -264,7 +279,7 @@ p {
         text-align: center;
     }
     p {
-        font-size: 14px;
+        font-size: 16px;
         position: relative;
         width: 100px;
         line-height: 150%;
@@ -293,7 +308,6 @@ p {
     }
     .duo {
         margin: 80px;
-        text-align: center;
     }
     p {
         position: relative;
