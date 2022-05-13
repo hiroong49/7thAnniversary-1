@@ -4,12 +4,24 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     -webkit-text-size-adjust:none;
-    font-family: 'HSYuji-Regular', 'HSYuji-Regular', 'HSYuji-Regular';
+    font-family: 'GangwonEdu_OTFBoldA', 'GangwonEdu_OTFBoldA', 'GangwonEdu_OTFBoldA';
 }
 body {
     background-color: #e8e8e8;
